@@ -1,0 +1,14 @@
+@use '../abstracts';
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+/**
+ * Buttons
+ */
+.button {
+  display: block;
+  padding: 1rem;
+  color: abstracts.$text-color;
+  background-color: abstracts.$primary-color;
+  // … etc.
+}

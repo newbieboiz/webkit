@@ -1,0 +1,129 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+:root {
+  --text-color: hsl(159, 74%, 6%);
+  --background-color: hsl(153, 73%, 97%);
+  --primary-color: hsl(158, 74%, 51%);
+  --secondary-color: hsl(184, 73%, 74%);
+  --accent-color: hsl(194, 74%, 64%);
+  --muted-color: hsl(212, 8%, 45%);
+}
+
+:root[data-theme='dark'] {
+  --text-color: hsl(159, 74%, 94%);
+  --background-color: hsl(153, 73%, 3%);
+  --primary-color: hsl(158, 74%, 49%);
+  --secondary-color: hsl(184, 73%, 26%);
+  --accent-color: hsl(194, 74%, 36%);
+  --muted-color: hsl(212, 8%, 45%);
+}
+
+/// Heading font family
+/// @type FontFamily
+$heading-ff: 'Playpen Sans' !default;
+
+/// Body font family
+/// @type FontFamily
+$body-ff: 'Playpen Sans' !default;
+
+$thin-fw: 100 !default;
+$extralight-fw: 200 !default;
+$light-fw: 300 !default;
+$normal-fw: 400 !default;
+$medium-fw: 500 !default;
+$semibold-fw: 600 !default;
+$bold-fw: 700 !default;
+$extrabold-fw: 800 !default;
+$black-fw: 900 !default;
+
+/// Copy text color
+/// @type Color
+$text-color: var(--text-color) !default;
+
+/// Main background color
+/// @type Color
+$background-color: var(--background-color) !default;
+
+/// Primary color
+/// @type Color
+$primary-color: var(--primary-color) !default;
+
+/// Secondary color
+/// @type Color
+$secondary-color: var(--secondary-color) !default;
+
+/// Accent color
+/// @type Color
+$accent-color: var(--accent-color) !default;
+
+/// Muted color
+/// @type Color
+$muted-color: var(--accent-color) !default;
+
+/// Linear primary gradient
+/// @type Gradient
+$linearPrimarySecondary: linear-gradient(
+  hsl(158, 74%, 51%),
+  hsl(184, 73%, 74%)
+);
+$linearPrimaryAccent: linear-gradient(hsl(158, 74%, 51%), hsl(194, 74%, 64%));
+$linearSecondaryAccent: linear-gradient(hsl(184, 73%, 74%), hsl(194, 74%, 64%));
+$radialPrimarySecondary: radial-gradient(
+  hsl(158, 74%, 51%),
+  hsl(184, 73%, 74%)
+);
+$radialPrimaryAccent: radial-gradient(hsl(158, 74%, 51%), hsl(194, 74%, 64%));
+$radialSecondaryAccent: radial-gradient(hsl(184, 73%, 74%), hsl(194, 74%, 64%));
+
+/// Spacing map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values in pixels
+$spacing: (
+  '1': '8px',
+  '2': '12px',
+  '3': '16px',
+  '4': '24px',
+  '5': '32px',
+  '6': '48px',
+) !default;
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1280px !default;
+
+$w-full: 100%;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'small': (
+    min-width: 375px,
+  ),
+  'medium': (
+    min-width: 768px,
+  ),
+  'large': (
+    min-width: 1024px,
+  ),
+) !default;
+
+/// Z-indexes map, gathering all Z layers of the application
+/// @access private
+/// @type Map
+/// @prop {String} key - Layer’s name
+/// @prop {Number} value - Z value mapped to the key
+$z-indexes: (
+  'modal': 5000,
+  'dropdown': 4000,
+  'default': 1,
+  'below': -1,
+);
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'https://cdn.example.com/assets/';
+$base-url: '/assets/' !default;
